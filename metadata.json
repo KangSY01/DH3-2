@@ -1,7 +1,5 @@
 {
   "name": "Boogi: Busan Hipster Guide",
   "description": "A vibrant, teen-focused guide to Busan's hottest spots, featuring an AI chatbot, interactive quizzes, and AI-powered art creation.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "requestFramePermissions": []
 }

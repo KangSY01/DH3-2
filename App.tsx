@@ -29,6 +29,16 @@ const App: React.FC = () => {
     { tab: AppTab.FOOD, label: "맛집월드컵", icon: <Trophy size={20}/> },
   ];
 
+  const getPageTitle = (tab: AppTab) => {
+    switch (tab) {
+      case AppTab.CHAT: return "어디가노";
+      case AppTab.QUIZ: return "퀴즈한바퀴";
+      case AppTab.ART: return "부기스튜디오";
+      case AppTab.FOOD: return "FOOD 월드컵";
+      default: return tab;
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#fdfdfd] text-slate-800">
       {/* Top Navigation - PC Style Optimized */}
@@ -105,7 +115,7 @@ const App: React.FC = () => {
             <div className="mb-12 text-center">
               <div className="inline-block bg-[#4A90E2]/10 text-[#4A90E2] px-6 py-2 rounded-full text-[12px] font-black uppercase tracking-widest mb-4 border border-[#4A90E2]/20">Active Feature</div>
               <h3 className="text-6xl font-black text-slate-900 tracking-tighter uppercase italic mb-6">
-                {activeTab === AppTab.CHAT ? "Where To Go" : activeTab}
+                {getPageTitle(activeTab)}
               </h3>
               <div className="h-2 w-24 bg-[#F5A623] mx-auto rounded-full"></div>
             </div>
